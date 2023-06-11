@@ -5,14 +5,14 @@ export function PlayRound(
   computerChoice: string
 ): GameResult {
   if (playerChoice === computerChoice) {
-    return "Draw";
+    return "Ничья";
   } else if (
-    (playerChoice === "rock" && computerChoice === "scissors") ||
-    (playerChoice === "scissors" && computerChoice === "paper") ||
-    (playerChoice === "paper" && computerChoice === "rock")
+    (playerChoice === "камень" && computerChoice === "ножницы") ||
+    (playerChoice === "ножницы" && computerChoice === "бумага") ||
+    (playerChoice === "бумага" && computerChoice === "камень")
   ) {
-    return "Win";
+    return "Игрок попедил";
   } else {
-    return "Lose";
+    return "Попедил комп";
   }
 }
